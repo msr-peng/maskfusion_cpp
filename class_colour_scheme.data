@@ -1,0 +1,83 @@
+fClass Name     Id  R   G   B     NOTES
+=========================================
+Background     0   120 120 120   GREY
+Person         1   255 0   0     RED
+Bicycle        2   229 43  80    AMARANTH
+Car            3   255 191 0     AMBER
+Motorcycle     4   153 102 204   AMETHYST
+Airplane       5   251 206 177   APRICOT
+Bus            6   127 255 212   AQUAMARINE
+Train          7   0   127 255   AZURE
+Truck          8   137 207 240   BABY BLUE
+Boat           9   245 245 220   BEIGE
+Traffic_Light  10  0   0   255   BLUE
+Fire_Hydrant   11  0   149 182   BLUE GREEN
+Stop_Sign      12  138 43  226   BLUE VIOLET
+Parking_Meter  13  222 93  131   BLUSH
+Bench          14  227 11  92    RASPBERRY
+Bird           15  150 75  0     BROWN
+Cat            16  128 0   32    BURGUNDY
+Dog            17  112 41  99    BYZENTIUM
+Horse          18  150 0   24    CARMINE
+Sheep          19  222 49  99    CERISE
+Cow            20  0   123 167   CERULEAN
+Elephant       21  247 231 206   CHAMPAGNE
+Bear           22  127 255 0     CHARTREUSE GREEN
+Zebra          23  123 63  0     CHOCOLATE
+Giraffe        24  0   71  171   COBALT BLUE
+Backpack       25  150 150 150   GREY
+Umbrella       26  111 78  55    COFFEE
+Handbag        27  184 115 51    COPPER
+Tie            28  255 127 80    CORAL
+Suitcase       29  220 20  60    CRIMSON
+Frisbee        30  0   255 255   CYAN
+Skis           31  237 201 175   DESERT SAND
+Snowboard      32  125 249 255   ELECTRIC BLUE
+Sports_Ball    33  80  200 120   EMERALD
+Kite           34  0   255 63    ERIN
+Baseball_Bat   35  255 215 0     GOLD
+Baseball_Glove 36  0   128 0     GREEN
+Skateboard     37  63  255 0     HARLEQUIN
+Surfboard      38  75  0   130   INDIGO
+Tennis_Racket  39  255 255 240   IVORY
+Bottle         40  146 0   10    SANGRIA
+Wine_Glass     41  41  171 135   JUNGLE GREEN
+Cup            42  181 126 220   LAVENDER
+Fork           43  255 247 0     LEMON
+Knife          44  200 162 200   LILAC
+Spoon          45  191 255 0     LIME
+Blow           46  255 0   255   MAGENTA
+Banana         47  255 0   175   MAGENTA ROSE
+Apple          48  128 0   0     MAROON
+Sandwich       49  224 176 255   MAUVE
+Orange         50  0   0   128   NAVY BLUE
+Broccoli       51  204 119  34   OCHRE
+Carrot         52  128 128 0     OLIVE
+Hot_Dog        53  255 102 0     ORANGE
+Pizza          54  255 69  0     ORANGE RED
+Donut          55  218 112 214   ORCHID
+Cake           56  255 229 50    PEACH
+Chair          57  209 226 49    PEAR
+Couch          58  224 17  95    RUBY
+Potted_Plant   59  28  57  187   PERSIAN BLUE
+Bed            60  253 108 158   PINK
+Dining_Table   61  142 69  133   PLUM
+Toilet         62  0   49  83    PRUSSIAN BLUE
+Tv             63  204 136 153   PUCE
+Laptop         64  128 0   128   PURPLE
+Mouse          65  205 127 50    BRONZE
+Remote         66  199 21  133   RED VIOLET
+Keyboard       67  255 0   127   ROSE
+Cell_Phone     68  204 204 255   PERIWINKLE
+Microwave      69  250 128 114   SALMON
+Oven           70  0   168 107   JADE
+Toaster        71  255 255 0     YELLOW
+Sink           72  255 36  0     SCARLET
+Refrigerator   73  192 190 192   SILVER
+Book           74  15  82  186   SAPPHIRE
+Clock          75  167 252 150   SPRING BUD
+Vase           76  0   255 127   SPRING GREEN
+Scissors       77  210 180 140   TAN
+Teddy_Bear     78  63  0   255   ULTRAMARINE
+Hair_Drier     79  127 0   255   VIOLET
+Toothbrush     80  112 128 144   SLATE GRAY
