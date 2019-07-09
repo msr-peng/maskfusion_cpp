@@ -1,9 +1,9 @@
 ### MaskFuion_cpp
 A real-time dense RGB-D SLAM system that can recognizes, segments and assigns semantic class labels (80 different classes) on 3D surfel map.
 
-![Real-time Pipeline](maskfusion_cpp_output.png)
+![Real-time Pipeline](./figures/maskfusion_cpp_output.png)
      
-![Classes Colors](classes_color.png)
+![Classes Colors](./figures/classes_color.png)
      
 # Reference
 * Kolkir C++ implementation of mask-rcnn. https://github.com/Kolkir/mlcpp/tree/master/mask_rcnn_pytorch
