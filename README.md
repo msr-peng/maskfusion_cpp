@@ -6,8 +6,8 @@ A real-time dense RGB-D SLAM system that can recognizes, segments and assigns se
 ![Classes Colors](./figures/classes_color.png)
      
 # Reference
-* Kolkir C++ implementation of mask-rcnn. https://github.com/Kolkir/mlcpp/tree/master/mask_rcnn_pytorch
-* **[Mask R-CNN]**, *Kaiming He, Georgia Gkioxari, Piotr Dollar, and Ross Girshick*, ICCV '17
+* [Kolkir C++ implementation of mask-rcnn](https://github.com/Kolkir/mlcpp/tree/master/mask_rcnn_pytorch).
+* **[Mask R-CNN]()**, *Kaiming He, Georgia Gkioxari, Piotr Dollar, and Ross Girshick*, ICCV '17
 * **[SemanticFusion: Dense 3D Semantic Mapping with Convolutional Neural Networks](http://wp.doc.ic.ac.uk/bjm113/wp-content/uploads/sites/113/2017/07/SemanticFusion_ICRA17_CameraReady.pdf)**, *J. McCormac, A. Handa, A. J. Davison, and S. Leutenegger*, ICRA '17
 * **[ElasticFusion: Real-Time Dense SLAM and Light Source Estimation](http://www.thomaswhelan.ie/Whelan16ijrr.pdf)**, *T. Whelan, R. F. Salas-Moreno, B. Glocker, A. J. Davison and S. Leutenegger*, IJRR '16
 
