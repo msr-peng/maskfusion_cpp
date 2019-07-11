@@ -1,4 +1,4 @@
-# MaskFuion_cpp
+# MaskFusion_cpp
 A real-time dense RGB-D SLAM system that can recognizes, segments and assigns semantic class labels (80 different classes) on 3D surfel map.
 
 ![Real-time Pipeline](./figures/maskfusion_cpp_output.png)
@@ -7,7 +7,7 @@ A real-time dense RGB-D SLAM system that can recognizes, segments and assigns se
      
 # Reference
 * [Kolkir C++ implementation of mask-rcnn](https://github.com/Kolkir/mlcpp/tree/master/mask_rcnn_pytorch).
-* **[Mask R-CNN]()**, *Kaiming He, Georgia Gkioxari, Piotr Dollar, and Ross Girshick*, ICCV '17
+* **[Mask R-CNN](https://research.fb.com/wp-content/uploads/2017/08/maskrcnn.pdf)**, *Kaiming He, Georgia Gkioxari, Piotr Dollar, and Ross Girshick*, ICCV '17
 * **[SemanticFusion: Dense 3D Semantic Mapping with Convolutional Neural Networks](http://wp.doc.ic.ac.uk/bjm113/wp-content/uploads/sites/113/2017/07/SemanticFusion_ICRA17_CameraReady.pdf)**, *J. McCormac, A. Handa, A. J. Davison, and S. Leutenegger*, ICRA '17
 * **[ElasticFusion: Real-Time Dense SLAM and Light Source Estimation](http://www.thomaswhelan.ie/Whelan16ijrr.pdf)**, *T. Whelan, R. F. Salas-Moreno, B. Glocker, A. J. Davison and S. Leutenegger*, IJRR '16
      
@@ -40,7 +40,7 @@ Then start your docker container by run
 ```
 docker run --privileged --runtime=nvidia -it /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY -e GDK_SCALE -e GDK_DPI_SCALE your_maskfusion_cpp_docker_image_name /bin/bash
 ```
-You can save the semantic surfel map in MaskFusion_cpp pipeline, the map will be saved as ply files in `/home/map/` directory.
+You can save the semantic surfel map in MaskFusion_cpp pipeline, the map will be saved as ply files in `/home/src/MaskFusion_cpp/map/` directory.
      
 # Tools
 * Recorder for klg files: https://github.com/mp3guy/Logger2

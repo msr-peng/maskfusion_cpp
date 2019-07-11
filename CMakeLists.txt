@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
 
-project(SemanticFusion)
+project(MaskFusion_cpp)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}")
@@ -30,9 +30,9 @@ set(CUDA_HOST_COMPILER gcc-5)
 
 set(CMAKE_CXX_FLAGS "-O3 -msse2 -msse3 -Wall -std=c++14")
 
-cuda_add_library(semantic_fusion_cuda_library SHARED ${cuda})
+cuda_add_library(mask_fusion_cuda_library SHARED ${cuda})
 
-target_link_libraries(semantic_fusion_cuda_library ${OpenCV_LIBS})
+target_link_libraries(mask_fusion_cuda_library ${OpenCV_LIBS})
 
 add_executable(${CMAKE_PROJECT_NAME}
                ${srcs}
@@ -43,7 +43,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
                       ${GLOG_LIBRARY}
                       ${OpenCV_LIBS}
                       ${OPENNI2_LIBRARY}
-                      semantic_fusion_cuda_library
+                      mask_fusion_cuda_library
                       efusion
                       caffe
 		      mrcnn_lib
@@ -56,4 +56,3 @@ target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
                            ${GLOG_INCLUDE_DIR}
                            ${OPENNI2_INCLUDE_DIR}
 )
-

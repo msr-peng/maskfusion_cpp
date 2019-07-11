@@ -59,7 +59,7 @@ class ElasticFusion
                       const bool frameToFrameRGB = false,
                       // Set default saved map directory
                       //const std::string fileName = "");
-                      const std::string fileName="/home/map/lab");
+                      const std::string fileName="/home/src/MaskFusion_cpp/map/surfel_map");
 
         virtual ~ElasticFusion();
 

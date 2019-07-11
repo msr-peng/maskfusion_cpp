@@ -87,7 +87,7 @@ int main(int argc, char *argv[]) {
   
   std::tie(model, config) = model_prepare(model_path);
   
-  caffe::Caffe::SetDevice(3);
+  caffe::Caffe::SetDevice(1);
   caffe::Caffe::set_mode(caffe::Caffe::GPU);
 
   // CNN Skip params
@@ -189,7 +189,7 @@ int main(int argc, char *argv[]) {
 
     gui->displayMaskRCNNInference("infer",imageTexture);
     // This is to display a predicted semantic segmentation from the fused map
-    mask_fusion->NewCalculateProjectedProbabilityMap(map);
+    mask_fusion->CalculateProjectedProbabilityMap(map);
     gui->displayArgMaxClassColouring("segmentation",mask_fusion->get_rendered_probability()->mutable_gpu_data(),
                                      new_num_classes,mask_fusion->get_class_max_gpu()->gpu_data(),
                                      mask_fusion->max_num_components(),map->GetSurfelIdsGpu(),0.0);
