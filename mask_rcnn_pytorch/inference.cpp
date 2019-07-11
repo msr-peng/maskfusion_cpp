@@ -2,7 +2,7 @@
 
 namespace fs = std::experimental::filesystem;
 
-void inference(const cv::Mat &input_image, cv::Mat &output_image, cv::Mat& scores_matrix, cv::Mat& class_ids_matrix, MaskRCNN& model, std::shared_ptr<InferenceConfig> config, bool output_flag) {
+void inference(std::vector<ClassColour> &colour_scheme, const cv::Mat &input_image, cv::Mat &output_image, cv::Mat& scores_matrix, cv::Mat& class_ids_matrix, MaskRCNN& model, std::shared_ptr<InferenceConfig> config, bool output_flag) {
   try {
     std::vector<cv::Mat> images{input_image};
     // Mold inputs to format expected by the neural network
@@ -31,7 +31,7 @@ void inference(const cv::Mat &input_image, cv::Mat &output_image, cv::Mat& score
       }
 
       float score_threshold = 0.7f;
-      visualize(input_image, output_image, scores_matrix, class_ids_matrix, std::get<0>(results[0]), std::get<1>(results[0]),
+      visualize(colour_scheme, input_image, output_image, scores_matrix, class_ids_matrix, std::get<0>(results[0]), std::get<1>(results[0]),
                 std::get<2>(results[0]), std::get<3>(results[0]),
                 score_threshold, GetDatasetClasses(), output_flag);
     } else {

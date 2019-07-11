@@ -18,6 +18,6 @@
 #include <iostream>
 #include <memory>
 
-void inference(const cv::Mat &input_image, cv::Mat &output_image, cv::Mat& scores_matrix, cv::Mat& class_ids_matrix, MaskRCNN& model, std::shared_ptr<InferenceConfig> config, bool output_flag = false);
+void inference(std::vector<ClassColour> &colour_scheme, const cv::Mat &input_image, cv::Mat &output_image, cv::Mat& scores_matrix, cv::Mat& class_ids_matrix, MaskRCNN& model, std::shared_ptr<InferenceConfig> config, bool output_flag = false);
 
 #endif  // INFERENCE_H

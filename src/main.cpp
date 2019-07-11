@@ -99,7 +99,7 @@ int main(int argc, char *argv[]) {
   const int new_num_classes = 81;
   std::cout<<"Network produces "<<new_num_classes<<" output classes"<<std::endl;
   // Check the class colour output and the number of classes matches
-  std::vector<ClassColour> new_class_colour_lookup = load_colour_scheme("../class_colour_scheme.data",new_num_classes);
+  std::vector<ClassColour> class_colour_lookup = load_colour_scheme("../class_colour_scheme.data",new_num_classes);
   std::unique_ptr<SemanticFusionInterface> mask_fusion(new SemanticFusionInterface(new_num_classes,100));
   // Initialise the Gui, Map, and Kinect Log Reader
   const int width = 640;
@@ -114,7 +114,7 @@ int main(int argc, char *argv[]) {
     std::string logFile;
     Parse::get().arg(argc, argv, "-l", logFile);
     if(logFile.length()) {
-      log_reader.reset(new RawLogReader(logFile, true));
+      log_reader.reset(new RawLogReader(logFile, false));
     }
     else {
     log_reader.reset(new PNGLogReader(argv[1],argv[2]));
@@ -127,9 +127,9 @@ int main(int argc, char *argv[]) {
     }
   }
   // Initialise gui and map after log_reader for existing OpenGL context
-  std::unique_ptr<Gui> gui(new Gui(true,new_class_colour_lookup,640,480));
+  std::unique_ptr<Gui> gui(new Gui(true,class_colour_lookup,640,480));
   std::unique_ptr<ElasticFusionInterface> map(new ElasticFusionInterface());
-  if (!map->Init(new_class_colour_lookup)) {
+  if (!map->Init(class_colour_lookup)) {
     std::cout<<"ElasticFusionInterface init failure"<<std::endl;
   }
   // Frame numbers for logs
@@ -197,7 +197,7 @@ int main(int argc, char *argv[]) {
     
     if (gui->reset()) {
       map.reset(new ElasticFusionInterface());
-      if (!map->Init(new_class_colour_lookup)) {
+      if (!map->Init(class_colour_lookup)) {
         std::cout<<"ElasticFusionInterface init failure"<<std::endl;
       }
     }

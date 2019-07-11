@@ -5,9 +5,12 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 
+#include "../src/utilities/Types.h"
+
 void output(string file_name, cv::Mat &output_mat);
 
-void visualize(const cv::Mat& input_image,
+void visualize(std::vector<ClassColour> &colour_scheme,
+               const cv::Mat& input_image,
 	       cv::Mat& output_image,
 	       cv::Mat& scores_matrix,
 	       cv::Mat& class_ids_matrix,

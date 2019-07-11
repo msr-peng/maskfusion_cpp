@@ -8,16 +8,6 @@
 void output(string file_name, cv::Mat &output_mat) {
   std::ofstream output_file;
   output_file.open(file_name);
-  /*
-  for (int y = 0; y < (output_mat.rows/10); ++y) {
-    uchar *row_ptr = output_mat.ptr<uchar>(10*y);
-    for (int x = 0; x < (output_mat.cols/10); ++x) {
-      int val = row_ptr[10*x];
-      output_file << val;
-    }
-    output_file << "\n";
-  }
-  */
   float *ptr = (float*)output_mat.data;
   for (int y = 0; y < (output_mat.rows/10); ++y) {
     for (int x = 0; x < (output_mat.cols/10); ++x) {
@@ -29,7 +19,8 @@ void output(string file_name, cv::Mat &output_mat) {
   output_file.close();
 }
 
-void visualize(const cv::Mat& image,
+void visualize(std::vector<ClassColour> &colour_scheme,
+               const cv::Mat& image,
 	       cv::Mat& output_image,
 	       cv::Mat& scores_matrix,
 	       cv::Mat& class_ids_matrix,
@@ -52,11 +43,13 @@ void visualize(const cv::Mat& image,
       auto x2 = *bbox[3].data<int32_t>();
       auto class_id = *class_ids[i].data<int64_t>();
 
+      ClassColour class_color = colour_scheme[class_id];
       cv::Mat bin_mask = masks[i].clone();
+      bin_mask /= 255;
       cv::Mat mask_ch[3];
-      mask_ch[2] = bin_mask;
-      mask_ch[0] = cv::Mat::zeros(img.size(), CV_8UC1);
-      mask_ch[1] = cv::Mat::zeros(img.size(), CV_8UC1);
+      mask_ch[0] = bin_mask*class_color.b;
+      mask_ch[1] = bin_mask*class_color.g;
+      mask_ch[2] = bin_mask*class_color.r;
       cv::Mat mask;
       cv::merge(mask_ch, 3, mask);
       cv::addWeighted(img, 1, mask, 0.5, 0, img);
@@ -74,7 +67,6 @@ void visualize(const cv::Mat& image,
 
       // output for cuda kernel to update probabilities
       bin_mask.convertTo(bin_mask, CV_32F);
-      bin_mask /= 255.0;
       if (output_flag) {
 	std::string prefix = "/home/Downloads/outputs/mask_";
 	std::string num = std::to_string(i);

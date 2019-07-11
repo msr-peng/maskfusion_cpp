@@ -15,7 +15,12 @@ A real-time dense RGB-D SLAM system that can recognizes, segments and assigns se
 In order to run MaskFusion_cpp pipeline smoothly, you need 2 GPU with enough memory to store multiple models simultaneously. I used two Nvidia GTX 1080i for experiments.
      
 # How to build it?
-The script `build.sh` shows step-by-step how MaskFusion_cpp is built based on Ubuntu 16.04 environment (within CUDA 9.0, cuDNN 7.1.4 and OpenGL 4.6.0) and which dependencies are required. A dockerfile and docker image for MaskFusion_cpp will be provided laterly.
+I recommend to build MaskFusion_cpp environment by [nvidia-docker](https://github.com/NVIDIA/nvidia-docker). You can build the MaskFusion_cpp docker image by the Dockerfile I provided:
+```
+cd MaskFusion_cpp/docker
+docker build -t maskfusion_cpp .
+```
+I also provided script `build.sh` shows step-by-step how MaskFusion_cpp is built based on Ubuntu 16.04 environment (within CUDA 9.0, cuDNN 7.1.4 and OpenGL 4.6.0) and which dependencies are required.
      
 # Download MaskRCNN Models
 You can download the pre-trained MaskRCNN model from [here](https://drive.google.com/file/d/1H8_0uxCt7J7QIqQWs2QL-fW558-jRm9a/view). Then put the downloaded model `mask_rcnn_coco.dat` in `MaskFusion_cpp/model` directory.
@@ -45,5 +50,3 @@ You can save the semantic surfel map in MaskFusion_cpp pipeline, the map will be
 # Tools
 * Recorder for klg files: https://github.com/mp3guy/Logger2
 * Viewer for ply files: https://github.com/cnr-isti-vclab/meshlab
-     
-# Notes
