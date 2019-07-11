@@ -5,7 +5,8 @@ A real-time dense RGB-D SLAM system that can recognizes, segments and assigns se
      
 ![Classes Colors](./figures/classes_color.png)
      
-![Click here to see the demo video!](https://youtu.be/9d0Szh7lkns)
+**[Click here to see the demo video!](https://youtu.be/9d0Szh7lkns)**
+     
 # Reference
 * [Kolkir C++ implementation of mask-rcnn](https://github.com/Kolkir/mlcpp/tree/master/mask_rcnn_pytorch).
 * **[Mask R-CNN](https://research.fb.com/wp-content/uploads/2017/08/maskrcnn.pdf)**, *Kaiming He, Georgia Gkioxari, Piotr Dollar, and Ross Girshick*, ICCV '17
