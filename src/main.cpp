@@ -69,8 +69,7 @@ void infer(cv::Mat &input_image, cv::Mat &output_image, cv::Mat &scores_matrix, 
 
 int main(int argc, char *argv[]) {
   // Set MaskRCNN Parameters
-  auto input_image = LoadImage("/home/Downloads/test.jpg");
-  std::string model_path = "/home/Downloads/mask_rcnn_coco.dat";
+  std::string model_path = "/home/src/MaskFusion_cpp/model/mask_rcnn_coco.dat";
   cv::Mat input_image_bgr;
   cv::Mat output_image(480, 640, CV_8UC3, cv::Scalar(255,255,255));
   cv::Mat scores_matrix(480, 640, CV_32FC1, cv::Scalar(0.0));
