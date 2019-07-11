@@ -1,12 +1,14 @@
-# Please make sure your Ubuntu has CUDA, cuDNN and OpenGL installed firstly
-
+FROM bluebirdpp/cudagl:9.0-cudnn7-devel-ubuntu16.04
+ARG OPENCV_VERSION=3.4.1
+ARG PYTORCH_COMMIT_ID=832216
+RUN
 # build opencv from source
-apt-get update &&\
+    apt-get update &&\
     apt-get install build-essential &&\
     apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev &&\
     cd /home && mkdir src && cd src &&\
     git clone https://github.com/opencv/opencv.git &&\
-    cd opencv && git checkout 3.4.1 && mkdir build && cd build &&\
+    cd opencv && git checkout $OPENCV_VERSION && mkdir build && cd build &&\
     cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local .. &&\
     make -j`nproc` &&\
     make install &&\
@@ -14,9 +16,8 @@ apt-get update &&\
 #Build pytorch from source
     cd /home/src &&\
     apt-get install python-pip libomp-dev &&\
-    PYTORCH_COMMIT_ID="832216" &&\
     git clone https://github.com/pytorch/pytorch.git &&\
-    cd pytorch && git checkout ${PYTORCH_COMMIT_ID} && \
+    cd pytorch && git checkout $PYTORCH_COMMIT_ID && \
     git submodule update --init --recursive &&\
     pip install -r requirements.txt &&\
     mkdir build && cd build &&\
