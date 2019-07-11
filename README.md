@@ -26,7 +26,9 @@ I also provided script `build.sh` shows step-by-step how MaskFusion_cpp is built
 You can download the pre-trained MaskRCNN model from [here](https://drive.google.com/file/d/1H8_0uxCt7J7QIqQWs2QL-fW558-jRm9a/view). Then put the downloaded model `mask_rcnn_coco.dat` in `MaskFusion_cpp/model` directory.
      
 # Run MaskFusion_cpp
-If you have a ASUS Xtion Pro Live depth camera, then you can run MaskFusion_cpp after build it.
+![Offline Pipeline](./figures/pipeline.png)
+     
+If you have a ASUS Xtion Pro Live depth camera working, then you can run MaskFusion_cpp after build it.
 ```
 cd MaskFusion_cpp && mkdir build && cd build && cmake .. && make -j`nproc`
 ./MaskFusion_cpp
