@@ -7,7 +7,7 @@ A real-time dense RGB-D SLAM system that can recognizes, segments and assigns se
      
 **[Click here to see the demo video!](https://youtu.be/9d0Szh7lkns)**
      
-**[Click here to see the project report!](https://github.com/msr-peng/maskfusion_cpp)**
+**[Click here to see the project report!](https://msr-peng.github.io/portfolio/projects/maskfusion_cpp/)**
      
 # Reference
 * [Kolkir C++ implementation of mask-rcnn](https://github.com/Kolkir/mlcpp/tree/master/mask_rcnn_pytorch).
