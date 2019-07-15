@@ -6,6 +6,7 @@ A real-time dense RGB-D SLAM system that can recognizes, segments and assigns se
 ![Classes Colors](./figures/classes_color.png)
      
 **[Click here to see the demo video!](https://youtu.be/9d0Szh7lkns)**
+     
 **[Click here to see the project report!](https://github.com/msr-peng/maskfusion_cpp)**
      
 # Reference
